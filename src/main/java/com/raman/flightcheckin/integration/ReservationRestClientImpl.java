@@ -14,15 +14,13 @@ public class ReservationRestClientImpl implements ReservationRestClient {
 	@Override
 	public Reservation findReservation(Long id) {
 		RestTemplate restTemplate = new RestTemplate();
-		Reservation reservation = restTemplate.getForObject(RESERVATION_REST_URL + id, Reservation.class);
-		return reservation;
+		return restTemplate.getForObject(RESERVATION_REST_URL + id, Reservation.class);
 	}
 
 	@Override
 	public Reservation updateReservation(ReservationUpdateRequest request) {
 		RestTemplate restTemplate = new RestTemplate();
-		Reservation reservation = restTemplate.postForObject(RESERVATION_REST_URL, request, Reservation.class);
-		return reservation;
+		return restTemplate.postForObject(RESERVATION_REST_URL, request, Reservation.class);
 	}
 
 }
