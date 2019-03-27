@@ -9,7 +9,7 @@ import com.raman.flightcheckin.integration.dto.ReservationUpdateRequest;
 @Service
 public class ReservationRestClientImpl implements ReservationRestClient {
 
-	private static final String RESERVATION_REST_URL = "http://localhost:8080/flightreservation/reservations/";
+	private static final String RESERVATION_REST_URL = "http://localhost:9090/flightreservation/reservations/";
 
 	@Override
 	public Reservation findReservation(Long id) {
